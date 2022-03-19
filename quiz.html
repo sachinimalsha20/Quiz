@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+<div class="banner">
+    <video autoplay muted loop>
+        <source type="video/mp4" src="video/quizBackground.mp4">
+    </video>
+    <div>
+        <h1> 1 Min Timer </h1>
+        <svg viewBox="0 0 42 42">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgb(220,220,220);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255,240,245);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <circle r=10 cx=21 cy=21 fill="url(#grad1)" stroke="grey" stroke-width="2px" stroke-dasharray="63" stroke-linecap="round"></circle>
+            <text y="-15px" x="13px" fill="grey"></text>
+        </svg>
+    </div>
+    <div class="content">
+        <div class="home-box custom-box ">
+            <h3>Instruction</h3>
+            <p>Total number of questions : <span class="total-question">10</span> </p>
+            <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div class="quiz-box custom-box hide">
+
+            <div class="question-number">
+
+
+            </div>
+
+            <div class="question-text">
+
+            </div>
+            <div class="option-container"></div>
+            <div class="next-question-btn">
+                <button type="button" class="btn" onclick="next()">Next</button>
+            </div>
+            <div class="answer-indicator">
+
+            </div>
+
+        </div>
+        <!--result-box-->
+        <div class="result-box custom-box hide">
+            <h1>Quiz Result</h1>
+            <table>
+                <tr>
+                    <td>Total Question</td>
+                    <td><span class="total-question"></span></td>
+                </tr>
+                <tr>
+                    <td>Attempt</td>
+                    <td><span class="total-attempt"></span> </td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td><span class="total-correct"></span> </td>
+                </tr>
+                <tr>
+                    <td>Wrong</td>
+                    <td><span class="total-wrong"></span> </td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><span class="percentage"></span> </td>
+                </tr>
+                <tr>
+                    <td>Your Total Score </td>
+                    <td><span class="total-score"></span> </td>
+                </tr>
+                <tr>
+                    <td>Time to answer for quiz  </td>
+                    <td><span class="time"></span> </td>
+                </tr>
+            </table>
+            <div class="btn"><a href="Quiz.html"><input class="tryAgain" onclick="tryAgainQuiz()" type = "button" value = "Try Again" ></a></div>
+            <button type="button" class="btn" onclick="window.location.href='home.html'" >Go To Home</button>
+        </div>
+
+        <script src="quiz_javaScript/quiz.js"></script>
+        <script src="quiz_javaScript/app.js"></script>
+
+    </div>
+
+
+</div>
+<div>
+    <p>Copyright ©️ 2021 Pearl Tours. All Right Reserved.</p>
+    <p>Site editor: <a href="sachini.html">Sachini De Silva</a></p>
+</div>
+</body>
+</html>
